@@ -1,12 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+
+  const [active, setActive] = useState("Home");
+  const location = useLocation();
+
+  useEffect(() => {
+
+    if (location.pathname === "/"){
+      setActive("Home");
+    } else if(location.pathname === "/about"){
+      setActive("About");
+    } else if(location.pathname === "/skills"){
+      setActive("Skills");
+    } else if (location.pathname === "/contact"){
+      setActive("Contact");
+    } else if(location.pathname === "*"){
+      setActive("Error");
+    }
+
+  }, [location])
+
   return (
     <div>
       <div className="navbar navbar-expand-lg bg-dark">
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand text-light">
+          <Link to="/" className={`navbar-brand ${ active === "Home" ? "text-light" : "text-light"}`}
+          onClick={() => setActive("Home")}
+           >
             Ashish
           </Link>
           <button
@@ -25,7 +47,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   to="/"
-                  className="nav-link text-light mx-2 btn btn-danger"
+                  className={`nav-link ${ active === "Home" ? "text-light mx-2 btn btn-primary" : "text-light"}`}
+                  onClick={() => setActive("Home")}
                 >
                   Home
                 </Link>
@@ -33,7 +56,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   to="about"
-                  className="nav-link text-light mx-2 btn btn-danger"
+                  className={`nav-link ${ active === "About" ? "text-light mx-2 btn btn-primary" : "text-light"}`}
+                  onClick={() => setActive("About")}
                 >
                   About
                 </Link>
@@ -41,7 +65,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   to="skills"
-                  className="nav-link text-light mx-2 btn btn-danger"
+                  className={`nav-link ${ active === "Skills" ? "text-light mx-2 btn btn-primary" : "text-light"}`}
+                  onClick={() => setActive("Skills")}
                 >
                   Skills
                 </Link>
@@ -49,7 +74,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   to="projects"
-                  className="nav-link text-light mx-2 btn btn-danger"
+                  className={`nav-link ${active === "Projects" ? "text-light mx-2 btn btn-primary" : "text-light"}`}
+                  onClick={() =>setActive("Projects")}
                 >
                   Projects
                 </Link>
@@ -57,7 +83,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   to="contact"
-                  className="nav-link text-light mx-2 btn btn-danger"
+                  className={`nav-link ${active === "Contact" ? "text-light mx-2 btn btn-primary" : "text-light"}`}
+                  onClick={() => setActive("Contact")}
                 >
                   Contact
                 </Link>
