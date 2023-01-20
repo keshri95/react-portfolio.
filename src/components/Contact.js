@@ -65,12 +65,13 @@ const Contact = () => {
   };
 
   return (
-    
+    <>
     <div className="container my-3 ">
       <div className="row">
-        <div className="col-4 contact__page contact__border">
+        <div className="col-md-4 col-lg-4  contact__page contact__border">
+
           <div className="p-2">
-            <p className="display-6">Contact Information</p>
+            <p className="fs-2">Contact Information</p>
             <p className="fs-5">Fill up the form details</p>
           </div>
 
@@ -93,14 +94,14 @@ const Contact = () => {
 
           <div className="d-flex justify-content-evenly my-3">
             <a
-              href="#"
+              href="https://www.linkedin.com/in/ashish-keshri-b1a250188/"
               target="_blank"
               className="rounded-circle p-2 btn btn-primary"
             >
               <BsLinkedin fontSize={25} />
             </a>
             <a
-              href="#"
+              href="https://github.com/keshri95"
               target="_blank"
               className="rounded-circle p-2 btn btn-dark"
             >
@@ -109,9 +110,9 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="col-8 col-4 p-3">
+        <div className="col-md-8 col-lg-8">
           <form className="row g-3" onSubmit={submitHandler}>
-            <div className="col-md-6 ">
+            <div className="col-lg-6 col-md-12 ">
               <label htmlFor="inputPassword4" className="form-label">
                 First Name
               </label>
@@ -128,7 +129,7 @@ const Contact = () => {
               <p className="text-danger">{isError.fname}</p>
             </div>
 
-            <div className="col-md-6">
+            <div className="col-lg-6 col-md-12">
               <label htmlFor="inputPassword4" className="form-label">
                 Last Name
               </label>
@@ -145,7 +146,7 @@ const Contact = () => {
               <p className="text-danger">{isError.lname}</p>
             </div>
 
-            <div className="col-md-6">
+            <div className="col-lg-6 col-md-12">
               <label htmlFor="inputEmail4" className="form-label">
                 Email
               </label>
@@ -162,7 +163,7 @@ const Contact = () => {
               <p className="text-danger">{isError.email}</p>
             </div>
 
-            <div className="col-6">
+            <div className="col-lg-6 col-md-12">
               <label htmlFor="number" className="form-label">
                 Contact
               </label>
@@ -179,7 +180,7 @@ const Contact = () => {
               <p className="text-danger">{isError.contact}</p>
             </div>
 
-            <div className="col-12">
+            <div className="col-lg-12 col-md-12">
               <label htmlFor="message" className="form-label">
                 Message
               </label>
@@ -204,6 +205,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
 
   );
 };

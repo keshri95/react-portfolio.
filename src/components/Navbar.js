@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import resume from "../components/utillities/resume.pdf";
 
 const Navbar = () => {
 
@@ -10,22 +11,26 @@ const Navbar = () => {
 
     if (location.pathname === "/"){
       setActive("Home");
-    } else if(location.pathname === "/about"){
+    } 
+    else if(location.pathname === "/about"){
       setActive("About");
-    } else if(location.pathname === "/skills"){
-      setActive("Skills");
-    } else if (location.pathname === "/contact"){
+    }
+    else if(location.pathname === "/projects"){
+      setActive("Projects");
+    }
+    else if (location.pathname === "/contact"){
       setActive("Contact");
-    } else if(location.pathname === "*"){
+    } 
+    else if(location.pathname === "*"){
       setActive("Error");
     }
 
   }, [location])
 
   return (
-    <div>
+    <>
       <div className="navbar navbar-expand-lg bg-dark">
-        <div className="container-fluid">
+        <div className="container">
           <Link to="/" className={`navbar-brand ${ active === "Home" ? "text-light" : "text-light"}`}
           onClick={() => setActive("Home")}
            >
@@ -64,15 +69,6 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  to="skills"
-                  className={`nav-link ${ active === "Skills" ? "text-light mx-2 btn btn-primary" : "text-light"}`}
-                  onClick={() => setActive("Skills")}
-                >
-                  Skills
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
                   to="projects"
                   className={`nav-link ${active === "Projects" ? "text-light mx-2 btn btn-primary" : "text-light"}`}
                   onClick={() =>setActive("Projects")}
@@ -89,11 +85,18 @@ const Navbar = () => {
                   Contact
                 </Link>
               </li>
+              <li className="nav-item">
+                <a href={resume} download="Resume"
+                  className="btn btn-bd-primary"
+                >
+                 Get Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

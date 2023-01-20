@@ -1,13 +1,218 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap");
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 200px;
+  --gt: linear-gradient(black, black);
+  --n: 100px;
+
+  height: 500px;
+  background: var(--gt) top right, var(--gt) top var(--n) right,
+    var(--gt) top calc(var(--n) * 2) right,
+    var(--gt) top calc(var(--n) * 3) right,
+    var(--gt) top calc(var(--n) * 4) right, rgb(17, 117, 184);
+  background-repeat: no-repeat;
+  background-size: 60%, 90%, 70%, 40%, 10%;
+}
+
+.card__background__color {
+  /* background: conic-gradient(from 180deg, #fff, #000); */
+  background: conic-gradient(from 90deg, #fff, rgb(160, 155, 155));
+}
+
+.contact__page {
+  background: rgb(2, 0, 36);
+}
+.contact__page p {
+  color: white;
+}
+.contact__border {
+  border-radius: 0.5rem !important;
+}
+
+ul {
+  list-style: none;
+}
+.about-info img {
+  height: 30vh;
+  border-radius: 50%;
+}
+.about__tools li {
+  border: 1px solid;
+  margin: 3px;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  background: conic-gradient(from 180deg, #fff, #000);
+}
+
+label {
+  color: white;
+}
+
+/* resume btn  */
+  .btn-bd-primary {
+    border-top: 1px solid #10517a;
+    background: #2c13bd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#005187), to(#2c13bd));
+    background: -webkit-linear-gradient(top, #005187, #2c13bd);
+    background: -moz-linear-gradient(top, #005187, #2c13bd);
+    background: -ms-linear-gradient(top, #005187, #2c13bd);
+    background: -o-linear-gradient(top, #005187, #2c13bd);
+    /* padding:8px; */
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: #ffffff;
+    font-size: 21px;
+    font-family: Georgia, Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    }
+ .btn-bd-primary:hover {
+    border-top-color: #3d07ed;
+    background: #3d07ed;
+    color: #ccc;
+    }
+ .btn-bd-primary:active {
+    border-top-color: #5316b5;
+    background: #5316b5;
+    }
+
+/* ----- */
+/* Timeline========== */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container__timeline{
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container__timeline::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container__timeline {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container__timeline::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
 }
