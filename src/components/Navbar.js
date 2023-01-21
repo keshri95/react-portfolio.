@@ -20,9 +20,6 @@ const Navbar = () => {
     else if(location.pathname === "/projects"){
       setActive("Projects");
     }
-    else if (location.pathname === "/contact"){
-      setActive("Contact");
-    } 
     else if(location.pathname === "*"){
       setActive("Error");
     }
@@ -39,12 +36,12 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar navbar-expand-lg bg-dark">
+      <div className="navbar navbar-expand-lg bg-secondary">
         <div className="container">
           <Link to="/" className={`navbar-brand ${ active === "Home" ? "text-light" : "text-light"}`}
           onClick={() => setActive("Home")}
            >
-            Ashish
+            Ashish Keshri
           </Link>
           <button
             className="navbar-toggler"
@@ -84,15 +81,6 @@ const Navbar = () => {
                   onClick={() =>setActive("Projects")}
                 >
                   Projects
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="contact"
-                  className={`nav-link ${active === "Contact" ? "text-light mx-2 btn btn-primary" : "text-light"}`}
-                  onClick={() => setActive("Contact")}
-                >
-                  Contact
                 </Link>
               </li>
               <li className="nav-item">

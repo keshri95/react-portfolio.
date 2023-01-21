@@ -42,7 +42,7 @@
     <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-RJQY38N0G1"
+      src=`https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_ANALYTICS}`
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -51,7 +51,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-RJQY38N0G1");
+      gtag("config", `${process.REACT_ANALYTICS}`);
     </script>
     <div id="root"></div>
     <!--

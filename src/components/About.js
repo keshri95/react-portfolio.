@@ -1,9 +1,9 @@
 import React from "react";
-
+import photo from "../components/utillities/photo.png";
 const About = () => {
   return (
     <>
-    <div className="container my-3">
+    <div className="container my-3 py-4">
       <div id="about" className="row cover">
         <h2 className="text-center text-light">About Me</h2>
 
@@ -11,7 +11,7 @@ const About = () => {
           <div className="col-md-6 text-center about-info">
             <img
               className="img-circle text-center profile-img"
-              src="https://avatars.githubusercontent.com/u/69101383?s=400&u=c1e640fecdd68eb0c6b122b6b6c92f94010bee3f&v=4"
+              src={photo}
             />
             <p className="text-center text-light fs-5">
               I'm Ashish Keshri, a self taught Web Development from Bangalore. I'm currently
