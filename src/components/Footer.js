@@ -3,6 +3,7 @@ import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 const Footer = () => {
   return (
+    <>
     <div className="container-fluid bg-secondary">
       <p className="text-center text-light fs-4">Connect with me</p>
       <div className="d-flex justify-content-center">
@@ -28,6 +29,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

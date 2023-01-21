@@ -26,6 +26,7 @@ const Projects = () => {
                       href={gitUrl}
                       target={"_blank"}
                       className="btn btn-primary"
+                      rel="noreferrer"
                     >
                       Code
                     </a>
@@ -33,6 +34,7 @@ const Projects = () => {
                       href={liveUrl}
                       target={"_blank"}
                       className="btn btn-danger"
+                      rel="noreferrer"
                     >
                       Live
                     </a>
