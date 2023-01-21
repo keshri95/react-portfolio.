@@ -9,8 +9,9 @@ const Footer = () => {
         <div>
           <a
             href="https://www.linkedin.com/in/ashish-keshri-b1a250188/"
-            target="_blank"
+            target={"_blank"}
             className="rounded-circle p-1 mx-4 btn btn-primary"
+            rel="noreferrer"
           >
             <BsLinkedin fontSize={25} />
           </a>
@@ -18,8 +19,9 @@ const Footer = () => {
         <div>
           <a
             href="https://github.com/keshri95"
-            target="_blank"
+            target={"_blank"}
             className="rounded-circle p-1 mx-4 btn btn-dark"
+            rel="noreferrer"
           >
             <AiFillGithub fontSize={25} />
           </a>
