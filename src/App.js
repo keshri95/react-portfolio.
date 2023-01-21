@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import About from "./components/About";
 import Error from "./components/Error";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -7,6 +6,7 @@ import Projects from "./components/Projects";
 import ReactGA from "react-ga";
 import React from "react";
 import Footer from "./components/Footer";
+import About from "./components/About";
 
 const TRACKING_ID = `${process.env.REACT_ANALYTICS}`;
 ReactGA.initialize(TRACKING_ID);
