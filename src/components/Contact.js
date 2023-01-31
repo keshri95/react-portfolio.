@@ -4,10 +4,10 @@ import { AiFillMessage } from "react-icons/ai";
 import { HiLocationMarker } from "react-icons/hi";
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
+import resume from "../components/utillities/resume.pdf";
 
 const Contact = () => {
-
-    /*
+  /*
   const initalState = {
     fname: "",
     lname: "",
@@ -69,51 +69,55 @@ const Contact = () => {
   */
 
   return (
-
     <div className="container my-3 ">
-      <div className="row">
-        <div className="col contact__page contact__border">
-          <div className="p-2">
-            <p className="display-6">Contact Information</p>
-            <p className="fs-5">Fill up the form details</p>
-          </div>
-
-          <div className="d-flex flex-column p-2">
-            <div className="d-flex gap-4 py-3">
-              <AiTwotonePhone fontSize={25} color={"pink"} />
-              <p className="fs-5">+919071360199</p>
+      <div className="position-absolute top-50 start-50 translate-middle">
+        <div className="row">
+          <div className="col contact__page contact__border">
+            <div className="p-2">
+              <p className="display-6">Contact Information</p>
+              <p className="fs-5">Fill up the form details</p>
             </div>
 
-            <div className="d-flex gap-4 py-3">
-              <AiFillMessage fontSize={25} color={"pink"} />
-              <p className="fs-5">keshri.ashish1@gmail.com</p>
+            <div className="d-flex flex-column p-2">
+              <div className="d-flex gap-4 py-3">
+                <AiTwotonePhone fontSize={25} color={"pink"} />
+                <p className="fs-5">+91 9071360199</p>
+              </div>
+
+              <div className="d-flex gap-4 py-3">
+                <AiFillMessage fontSize={25} color={"pink"} />
+                <p className="fs-5">keshri.ashish1@gmail.com</p>
+              </div>
+
+              <div className="d-flex gap-4 py-3">
+                <HiLocationMarker fontSize={25} color={"pink"} />
+                <p className="fs-5">Bangalore</p>
+              </div>
+
+              <a href={resume} download="Resume" className="btn btn-bd-primary">
+                Get Resume
+              </a>
             </div>
 
-            <div className="d-flex gap-4 py-3">
-              <HiLocationMarker fontSize={25} color={"pink"} />
-              <p className="fs-5">Bangalore</p>
+            <div className="d-flex justify-content-evenly my-3">
+              <a
+                href="#"
+                target="_blank"
+                className="rounded-circle p-2 btn btn-primary"
+              >
+                <BsLinkedin fontSize={25} />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                className="rounded-circle p-2 btn btn-dark"
+              >
+                <AiFillGithub fontSize={25} />
+              </a>
             </div>
           </div>
 
-          <div className="d-flex justify-content-evenly my-3">
-            <a
-              href="#"
-              target="_blank"
-              className="rounded-circle p-2 btn btn-primary"
-            >
-              <BsLinkedin fontSize={25} />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              className="rounded-circle p-2 btn btn-dark"
-            >
-              <AiFillGithub fontSize={25} />
-            </a>
-          </div>
-        </div>
-
-        {/* <div className="col-8 col-4 p-3">
+          {/* <div className="col-8 col-4 p-3">
           <form className="row g-3" onSubmit={submitHandler}>
             <div className="col-md-6 ">
               <label htmlFor="inputPassword4" className="form-label">
@@ -206,9 +210,9 @@ const Contact = () => {
             </div>
           </form>
         </div> */}
+        </div>
       </div>
     </div>
-
   );
 };
 
