@@ -7,6 +7,14 @@ import { AiFillGithub } from "react-icons/ai";
 import resume from "../components/utillities/resume.pdf";
 
 const Contact = () => {
+  const contactDetails = {
+    id: 1,
+    phoneNo: "+919071360199",
+    email: "keshri.ashish1@gmail.com",
+    location: "Bangalore",
+    linkdeinId: "https://www.linkedin.com/in/ashish-keshri-b1a250188",
+    githubId: "https://github.com/keshri95",
+  };
   /*
   const initalState = {
     fname: "",
@@ -81,17 +89,18 @@ const Contact = () => {
             <div className="d-flex flex-column p-2">
               <div className="d-flex gap-4 py-3">
                 <AiTwotonePhone fontSize={25} color={"pink"} />
-                <p className="fs-5">+91 9071360199</p>
+                <p className="fs-5">{contactDetails?.phoneNo}</p>
+                {/* <p className="fs-5">{contactDetails.phoneNo}</p> */}
               </div>
 
               <div className="d-flex gap-4 py-3">
                 <AiFillMessage fontSize={25} color={"pink"} />
-                <p className="fs-5">keshri.ashish1@gmail.com</p>
+                <p className="fs-5">{contactDetails?.email}</p>
               </div>
 
               <div className="d-flex gap-4 py-3">
                 <HiLocationMarker fontSize={25} color={"pink"} />
-                <p className="fs-5">Bangalore</p>
+                <p className="fs-5">{contactDetails?.location}</p>
               </div>
 
               <a href={resume} download="Resume" className="btn btn-bd-primary">
@@ -101,14 +110,14 @@ const Contact = () => {
 
             <div className="d-flex justify-content-evenly my-3">
               <a
-                href="#"
+                href={contactDetails?.linkdeinId}
                 target="_blank"
                 className="rounded-circle p-2 btn btn-primary"
               >
                 <BsLinkedin fontSize={25} />
               </a>
               <a
-                href="#"
+                href={contactDetails?.githubId}
                 target="_blank"
                 className="rounded-circle p-2 btn btn-dark"
               >
