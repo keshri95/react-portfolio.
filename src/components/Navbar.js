@@ -20,6 +20,9 @@ const Navbar = () => {
     else if(location.pathname === "/projects"){
       setActive("Projects");
     }
+    else if(location.pathname === "/contact"){
+      setActive("Contact");
+    }
     else if(location.pathname === "*"){
       setActive("Error");
     }
@@ -41,21 +44,10 @@ const Navbar = () => {
           <Link to="/" className={`navbar-brand ${ active === "Home" ? "text-light" : "text-light"}`}
           onClick={() => setActive("Home")}
            >
-            Ashish Keshri
+            Ashish 
           </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse " id="navbarNav">
-            <ul className="navbar-nav ms-auto">
+         
+            <ul className="  d-flex align-items-center">
               <li className="nav-item">
                 <Link
                   to="/"
@@ -84,6 +76,15 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link
+                  to="contact"
+                  className={`nav-link ${active === "Contact" ? "text-light mx-2 btn btn-primary" : "text-light"}`}
+                  onClick={() =>setActive("Contact")}
+                >
+                  Contact
+                </Link>
+              </li>
+              <li className="nav-item">
                 <a href={resume} download="Resume"
                   className="btn btn-bd-primary"
                 >
@@ -93,7 +94,6 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </div>
     </>
   );
 };

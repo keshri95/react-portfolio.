@@ -5,8 +5,8 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import ReactGA from "react-ga";
 import React from "react";
-import Footer from "./components/Footer";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 const TRACKING_ID = `${process.env.REACT_ANALYTICS}`;
 ReactGA.initialize(TRACKING_ID);
@@ -19,9 +19,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <Footer />
     </>
   );
 }

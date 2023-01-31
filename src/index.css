@@ -46,6 +46,9 @@ body {
 ul {
   list-style: none;
 }
+li{
+  padding: 5px;
+}
 .about-info img {
   height: 30vh;
   border-radius: 50%;

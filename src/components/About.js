@@ -29,6 +29,7 @@ const About = () => {
                 <li>CSS</li>
                 <li>JavaScript</li>
                 <li>Bootstrap</li>
+                <li>SASS/SCSS</li>
               </ul>
               <ul className="fs-4 about__tools">
                 <li>React js</li>
