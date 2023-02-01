@@ -76,28 +76,28 @@ const Contact = () => {
   */
 
   return (
-    <div className="container my-3 ">
-      <div className="position-absolute top-50 start-50 translate-middle">
+        <div className="container ">
+      <div className="position-absolute top-50 start-50 translate-middle my-4">
         <div className="row">
           <div className="col contact__page contact__border">
-            <div className="p-2">
+            <div>
               <p className="display-6">Contact Information</p>
               <p className="fs-5">Fill up the form details</p>
             </div>
 
-            <div className="d-flex flex-column p-2">
-              <div className="d-flex gap-4 py-3">
+            <div className="d-flex flex-column">
+              <div className="d-flex gap-4">
                 <AiTwotonePhone fontSize={25} color={"pink"} />
                 <p className="fs-5">{contactDetails?.phoneNo}</p>
                 {/* <p className="fs-5">{contactDetails.phoneNo}</p> */}
               </div>
 
-              <div className="d-flex gap-4 py-3">
+              <div className="d-flex gap-4">
                 <AiFillMessage fontSize={25} color={"pink"} />
                 <p className="fs-5">{contactDetails?.email}</p>
               </div>
 
-              <div className="d-flex gap-4 py-3">
+              <div className="d-flex gap-4">
                 <HiLocationMarker fontSize={25} color={"pink"} />
                 <p className="fs-5">{contactDetails?.location}</p>
               </div>
@@ -220,7 +220,8 @@ const Contact = () => {
         </div> */}
         </div>
       </div>
-    </div>
+
+      // </div>
   );
 };
 
