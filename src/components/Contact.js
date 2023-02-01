@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { AiTwotonePhone } from "react-icons/ai";
 import { AiFillMessage } from "react-icons/ai";
 import { HiLocationMarker } from "react-icons/hi";

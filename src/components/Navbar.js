@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 
-import resume from "../components/utillities/resume.pdf";
-
 const Navbar = () => {
 
   const [active, setActive] = useState("Home");
