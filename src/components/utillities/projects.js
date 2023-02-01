@@ -6,7 +6,7 @@ export const projects = [
     body: "It is a Shopping App user can be add items into the cart and delete. The final price will be reflect. Tools used React JS, Bootstrap HTML, CSS JavaScript. App is highly responsive",
     gitUrl: "https://github.com/keshri95/e-shopping",
     liveUrl: "https://e-shopping-xi.vercel.app/",
-  
+    end: 'Dec, 2022',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const projects = [
     body: "It is a blogs those displays all specific data has search delete and pagination with custome UI as loading spinner and scrollY to top. Tools used to build React JS, JavaScript, CSS, Bootstrap, HTML. It is responsive on all system.",
     gitUrl: "https://github.com/keshri95/blogs-feed",
     liveUrl: "https://blogs-feed.vercel.app/",
-  
+    end: 'Present',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const projects = [
     body: "It is a Movie app displays specific movie user search and display listed. Tools used to build React JS, JavaScript, CSS, Bootstrap, HTML. It is responsive on all system.",
     gitUrl: "https://github.com/keshri95/movie-app",
     liveUrl: "https://movie-app-keshri95.vercel.app/",
-   
+    end: 'Present',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const projects = [
     body: "It is a app random jokes displays, tools used HTML, CSS JavaScript.",
     gitUrl: "https://github.com/keshri95/dad-jokes",
     liveUrl: "https://dad-jokes-tau.vercel.app/",
-    
+    end: 'Nov, 2022',
   },
   {
     id: 5,
@@ -42,15 +42,15 @@ export const projects = [
     body: "It is user input and output display insted of yes or no, tools used HTML, CSS JavaScript.",
     gitUrl: "https://github.com/keshri95/yes-no-api",
     liveUrl: "https://yes-no-api.vercel.app/",
-    
+    end: 'Nov, 2022',
   },
   {
     id: 6,
-    date: "Sep, 2022",
-    title: "Burger House",
-    body: "It is Resturent landing page snapshots responsive, tools used HTML, CSS JavaScript, Boostrap and React JS.",
-    gitUrl: "https://github.com/keshri95/burger-house",
-    liveUrl: "https://burger-house-bay.vercel.app/",
-    
+    date: "Dec, 2022",
+    title: "GADGET BAZAR",
+    body: "It is a blog that displays all speciﬁc data with custom UI as loading spinner and scroll to top.HTML,CSS, Bootstrap, JavaScript, ReactJS, REST API, React Router, Vercel Hosting.",
+    gitUrl: "https://github.com/keshri95/Gadgets-Bazar",
+    liveUrl: "https://gadgets-bazar.vercel.app/",
+    end: 'Present',
   },
 ];

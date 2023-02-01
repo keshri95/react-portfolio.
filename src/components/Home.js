@@ -1,4 +1,5 @@
 import React from "react";
+import ExperianceCard from "./ExperianceCard";
 
 const Home = () => {
   const home = {
@@ -38,51 +39,7 @@ const Home = () => {
 
         <div className="col-lg-6 col-md-12">
           <div className="timeline">
-            {professinalWork.map(
-              ({ id, companyName, location, role, start, end, side }) => {
-                return (
-                  <div className={`container__timeline ${side} `} key={id}>
-                    <div className="content">
-                      <div className="card-body">
-                        <h5 className="card-title">
-                          {companyName} -
-                          <span className="text-muted">{location}</span>
-                        </h5>
-                        <p>{role}</p>
-                        <p>
-                          {start} - {end}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
-            )}
-            {/* <div className="container__timeline left">
-              <div className="content">
-                <div className="card-body">
-                  <h5 className="card-title">
-                    Bariﬂo Labs Pvt. Limited -
-                    <span className="text-muted">Bhubaneshwar</span>
-                  </h5>
-                  <p>Front End Developer</p>
-                  <p>06/2022 - 10/2022</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="container__timeline right">
-              <div className="content">
-                <div className="card-body">
-                  <h5 className="card-title">
-                    Trioﬁ Technology -
-                    <span className="text-muted">Bangalore</span>
-                  </h5>
-                  <p>Front End Developer</p>
-                  <p>12/2021 - 02/2022 </p>
-                </div>
-              </div>
-            </div> */}
+            <ExperianceCard professinalWork={professinalWork} />
           </div>
         </div>
       </div>

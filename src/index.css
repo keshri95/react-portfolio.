@@ -34,7 +34,7 @@ body {
 }
 
 .contact__page {
-  background: rgb(2, 0, 36);
+  background: rgb(17, 151, 184);
 }
 .contact__page p {
   color: white;
@@ -69,7 +69,7 @@ label {
 /* resume btn  */
   .btn-bd-primary {
     border-top: 1px solid #10517a;
-    background: #590aebc9;
+    background: rgb(17, 20, 184);
     background: -webkit-gradient(linear, left top, left bottom, from(#005187), to(#2c13bd));
     background: -webkit-linear-gradient(top, #005187, #2c13bd);
     background: -moz-linear-gradient(top, #005187, #2c13bd);
