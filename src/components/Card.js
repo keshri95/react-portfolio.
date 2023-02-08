@@ -1,6 +1,7 @@
 import React from "react";
 const Card = ({ projects }) => {
   return (
+    <>
     <div className="row row-cols-1 row-cols-md-3 g-4">
       {projects.map(({ id, title, date, body, gitUrl, liveUrl, end }) => {
         return (
@@ -17,7 +18,7 @@ const Card = ({ projects }) => {
                   href={gitUrl}
                   target={"_blank"}
                   className="btn btn-primary"
-                  rel="noreferrer"
+                 rel="noopener"
                 >
                   Code
                 </a>
@@ -25,7 +26,7 @@ const Card = ({ projects }) => {
                   href={liveUrl}
                   target={"_blank"}
                   className="btn btn-danger"
-                  rel="noreferrer"
+                 rel="noopener"
                 >
                   Live
                 </a>
@@ -35,6 +36,7 @@ const Card = ({ projects }) => {
         );
       })}
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,5 @@
 import React from "react";
-import ExperianceCard from "./ExperianceCard";
-
+const ExperianceCard = React.lazy(() => import("./ExperianceCard"));
 const Home = () => {
   const home = {
     name: ` Ashish Keshri`,
@@ -30,6 +29,7 @@ const Home = () => {
   ];
 
   return (
+    <>
     <div className="container my-3 py-4">
       <div className="row">
         <div className="col-lg-6 col-md-12">
@@ -44,6 +44,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

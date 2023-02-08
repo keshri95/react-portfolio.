@@ -48,6 +48,10 @@ const About = () => {
       id: 4,
       name: "SQL",
     },
+    {
+      id: 5,
+      name: "Material UI",
+    },
   ];
 
   return (
@@ -78,7 +82,7 @@ const About = () => {
                 </ul>
                 <ul className="fs-4 about__tools">
                   {toolsDiv.map(({ name, id }) => {
-                    return <li>{name}</li>;
+                    return <li key={id}>{name}</li>;
                   })}
                 </ul>
               </div>

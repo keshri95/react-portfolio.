@@ -53,4 +53,13 @@ export const projects = [
     liveUrl: "https://gadgets-bazar.vercel.app/",
     end: 'Present',
   },
+  {
+    id: 7,
+    date: "Feb, 2022",
+    title: "Rolodex",
+    body: "Displays all speciﬁc users lists data with custom UI as loading spinner and dark mode and light mode with search and delete lists.HTML,CSS, Material Ui, JavaScript, ReactJS, REST API, Vercel Hosting.",
+    gitUrl: "https://github.com/keshri95/rolodex",
+    liveUrl: "https://rolodex-teal.vercel.app/",
+    end: 'Present',
+  },
 ];

@@ -82,13 +82,6 @@ const Navbar = () => {
                   Contact
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <a href={resume} download="Resume"
-                  className="btn btn-bd-primary"
-                >
-                 Get Resume
-                </a>
-              </li> */}
             </ul>
           </div>
         </div>
