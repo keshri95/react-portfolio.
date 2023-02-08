@@ -23,7 +23,6 @@ const Contact = () => {
             <div className="col contact__page contact__border">
               <div>
                 <p className="display-6">Contact Information</p>
-                <p className="fs-5">Fill up the form details</p>
               </div>
 
               <div className="d-flex flex-column">
